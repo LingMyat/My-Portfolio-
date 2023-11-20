@@ -1,0 +1,29 @@
+---
+interface Props {
+	text: string;
+    href: string
+}
+
+const { text, href } = Astro.props; 
+---
+
+<a
+href={href}
+class="flex w-24 justify-center gap-1 items-center py-1 rounded text-xs"
+>
+    <slot />
+
+    <span class="font-semibold">{text}</span>
+</a>
+
+<style>
+    a {
+        background: #2E2E34;
+        color: #fff;
+    }
+
+    a:hover {
+        background: white;
+        color: #2E2E34;
+    }
+</style>
