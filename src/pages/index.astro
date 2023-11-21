@@ -1,16 +1,16 @@
 ---
-import Tech from '../components/Tech.astro';
 import Layout from '../layouts/Layout.astro';
-import Socials from '../components/Socials.astro';
-import Projects from '../components/Projects.astro';
-import Timelines from '../components/Timelines.astro';
-import DividerLine from '../components/DividerLine.astro';
+import Tech from '../components/Astro/Tech.astro';
+import Socials from '../components/Astro/Socials.astro';
+import Projects from '../components/Astro/Projects.astro';
+import Timelines from '../components/Astro/Timelines.astro';
+import DividerLine from '../components/Astro/DividerLine.astro';
 ---
 
 <Layout title="Ling Myat Aung">
 	<section class="mt-20 text-white font-mono">
 		<div class="flex gap-3 items-center mb-6">
-			<div class="w-2 h-2 bg-green-400 rounded-full"></div>
+			<div class="w-2 h-2 bg-green-500 rounded-full"></div>
 			<span>Online.</span>
 		</div>
 		<div class="relative mb-5">
@@ -19,12 +19,12 @@ import DividerLine from '../components/DividerLine.astro';
 			</h1>
 
 			<div style="transform: skew(160deg);height:12px; right:54px; width:184px;" 
-			class="absolute top-8 bg-cyan-400 opacity-60"
+			class="absolute bg-green-400 top-8 opacity-70"
 			></div>
 		</div>
 
 		<h1 class="text-4xl font-bold mb-8">
-			<span class="bg-gradient-to-r bg-clip-text text-transparent from-indigo-500 via-purple-500 to-pink-500" >Fullstack Developer</span>
+			<span class="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent" >Fullstack Developer</span>
 		</h1>
 
 		<Socials />
