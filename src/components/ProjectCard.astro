@@ -1,0 +1,28 @@
+---
+interface Props {
+    title: string;
+    body : string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<div class="p-3 rounded project-card flex flex-col">
+    <h5 class="text-lg font-semibold mb-2">
+        {title}
+    </h5>
+    <div class="mb-3">
+        <p class="text-sm font-medium text-gray-300">
+            {body}
+        </p>
+    </div>
+    <div class="flex gap-2 mt-auto items-center">
+        <slot/>
+    </div>
+</div>
+
+<style>
+	.project-card {
+		background: #2E2E34;
+	}
+</style>
