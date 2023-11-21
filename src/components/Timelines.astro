@@ -1,0 +1,47 @@
+---
+import Timeline from "./Timeline.astro";
+---
+
+<div class="mb-5">
+    <h4 class="text-2xl font-bold mb-10">My Timeline</h4>
+
+    <div class="">
+        <ol class="relative border-s-2 dark:border-gray-400 ms-4">    
+            <Timeline 
+            date='2022-01-04' 
+            name='528 Health, Beauty And Wellness' 
+            src='/528.jpg'
+            current={false}
+            >
+                <p>
+                    First developer job at 
+                    <a href="https://www.facebook.com/528healthbeautyandwellness" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">@528 Health, Beauty And Wellness</a>.
+                </p>
+            </Timeline>    
+            
+            <Timeline
+            date='2022-09-01' 
+            name='KTK Pharmacy' 
+            src='/ktk.jpg'
+            current={false}
+            >
+                <p>
+                    Move to Freelance. Joined
+                    <a href="https://www.facebook.com/ktkpharmacy" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">@KTK Pharmacy</a> as Backend Developer.
+                </p>
+            </Timeline>
+
+            <Timeline
+            date='2023-06-05' 
+            name='KTK Pharmacy' 
+            src='/minshinsaw.jpg'
+            current={true}
+            >
+                <p>
+                    Joined
+                    <a href="https://www.facebook.com/ktkpharmacy" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">@Min Shin Saw Co, Ltd.</a> as Software Developer.
+                </p>
+            </Timeline>
+        </ol>
+    </div>
+</div>
