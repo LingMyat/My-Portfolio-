@@ -54,22 +54,21 @@ const { title } = Astro.props;
 
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
-  	var mouseX = 0,
-    	mouseY = 0;
-  	var xp = 0,
-   		yp = 0;
+		var mouseX = 0,
+			mouseY = 0;
+		var xp = 0,
+			yp = 0;
 
-	document.addEventListener('mousemove', function (e) {
-		mouseX = e.pageX - 23;
-		mouseY = e.pageY - 103;
+		document.addEventListener('mousemove', function (e) {
+			mouseX = e.pageX - 23;
+			mouseY = e.pageY - 103;
+		});
+
+		setInterval(function () {
+			xp += (mouseX - xp) / 6;
+			yp += (mouseY - yp) / 6;
+			document.getElementById('circle').style.left = xp + 'px';
+			document.getElementById('circle').style.top = yp + 'px';
+		}, 17);
 	});
-
-	setInterval(function () {
-		xp += (mouseX - xp) / 6;
-		yp += (mouseY - yp) / 6;
-		document.getElementById('circle').style.left = xp + 'px';
-		document.getElementById('circle').style.top = yp + 'px';
-	}, 17);
-});
-
 </script>
