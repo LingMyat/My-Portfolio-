@@ -7,7 +7,7 @@ interface Props {
 const { title, body } = Astro.props;
 ---
 
-<div class="p-3 rounded project-card flex flex-col">
+<div class="p-3 rounded project-card fade-right flex flex-col">
     <h5 class="text-lg font-semibold mb-2">
         {title}
     </h5>
@@ -25,4 +25,16 @@ const { title, body } = Astro.props;
 	.project-card {
 		background: #2E2E34;
 	}
+
+    .project-card:nth-child(2) {
+        transition-delay: 200ms !important;
+    }
+
+    .project-card:nth-child(3) {
+        transition-delay: 200ms !important;
+    }
+
+    .project-card:nth-child(4) {
+        transition-delay: 300ms !important;
+    }
 </style>
