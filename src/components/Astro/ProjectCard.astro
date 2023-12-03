@@ -2,9 +2,10 @@
 interface Props {
     title: string;
     body : string;
+    href : string;
 }
 
-const { title, body } = Astro.props;
+const { title, body, href } = Astro.props;
 ---
 
 <div class="p-3 rounded project-card fade-right flex flex-col">
@@ -16,8 +17,14 @@ const { title, body } = Astro.props;
             {body}
         </p>
     </div>
-    <div class="flex gap-2 mt-auto items-center">
-        <slot/>
+    <div class="mt-auto flex justify-between items-center">
+        <div class="flex gap-2 items-center">
+            <slot/>
+        </div>
+
+        <a class="link-arrow" href={href} target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" viewBox="0 0 512 512"><path fill="currentColor" d="m359.873 121.377l-22.627 22.627l95.997 95.997H16v32.001h417.24l-95.994 95.994l22.627 22.627L494.498 256L359.873 121.377z"/></svg>
+        </a>
     </div>
 </div>
 
@@ -36,5 +43,10 @@ const { title, body } = Astro.props;
 
     .project-card:nth-child(4) {
         transition-delay: 300ms !important;
+    }
+
+    .link-arrow:hover {
+       color: #49CF74;
+       rotate: -30deg;
     }
 </style>

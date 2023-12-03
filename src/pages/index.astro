@@ -18,8 +18,8 @@ import DividerLine from '../components/Astro/DividerLine.astro';
 				Hello👋, I'm Ling Myat
 			</h1>
 
-			<div style="transform: skew(160deg);height:12px; right:54px; width:184px;" 
-			class="absolute bg-green-400 top-8 opacity-70"
+			<div style="transform: skew(160deg);height:12px; right:11%; width:184px;" 
+			class="absolute bg-green-400 top-8 opacity-60"
 			></div>
 		</div>
 
@@ -47,4 +47,41 @@ import DividerLine from '../components/Astro/DividerLine.astro';
 
 		<Tech />
 	</section>
+
+	<span id="circle" class="circle"></span>
 </Layout>
+
+<style>
+	.circle {
+		position: absolute;
+		border: 2px solid #4ad26c;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		transform-origin: center bottom;
+		pointer-events: none;
+		opacity: 0;
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		var mouseX = 0,
+			mouseY = 0;
+		var xp = 0,
+			yp = 0;
+
+		document.addEventListener('mousemove', function (e) {
+			document.getElementById('circle').style.opacity = '1';
+			mouseX = e.pageX - 533;
+			mouseY = e.pageY - 103;
+		});
+
+		setInterval(function () {
+			xp += (mouseX - xp) / 6;
+			yp += (mouseY - yp) / 6;
+			document.getElementById('circle').style.left = xp + 'px';
+			document.getElementById('circle').style.top = yp + 'px';
+		}, 17);
+	});
+</script>
