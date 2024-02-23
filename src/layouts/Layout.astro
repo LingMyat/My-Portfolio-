@@ -16,21 +16,35 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 
 		<meta property="og:title" content="Ling Myat Aung" />
-		<meta property="og:description" content="Experienced full-stack developer from Myanmar with 2 years of job expertise." />
-		<meta name="description" content="TExperienced full-stack developer from Myanmar with 2 years of job expertise." />
+		<meta property="og:description" content="Experienced full-stack developer from Myanmar with 2 years of job expertise in Php, Laravel and Vue.js. Ready to create innovative web solutions!" />
+		<meta name="description" content="Experienced full-stack developer from Myanmar with 2 years of job expertise in Php, Laravel and Vue.js. Ready to create innovative web solutions!" />
 
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Portfolio" /> 
+		<meta property="og:site_name" content="Ling Myat Aung" /> 
 
 		<meta property="og:image" content="/lingmyataung.jpg" /> 
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="Ling Myat Aung" />  
+		<meta name="twitter:title" content="Ling Myat Aung" />  
+		<meta name="twitter:description" content="TExperienced full-stack developer from Myanmar with 2 years of job expertise in Php, Laravel and Vue.js. Ready to create innovative web solutions!" />  
+		<meta name="twitter:image" content="/lingmyataung.jpg" />
 		
 		<title>{title}</title>
 		
 	</head>
 	<body>
-		<main class="sm:px-0 px-3">
+		<img 
+		  src="/astronut-1.gif" 
+		  class="
+		    fade-right absolute right-0 top-[-9.3%] sm:top-0 
+		  " 
+		  alt="astronut-animation"
+		>
+
+		<div id="main" class="sm:px-0 px-3">	
 			<slot />
-		</main>
+		</div>
 
 		<span id="circle" class="circle"></span>
 	</body>
@@ -61,7 +75,7 @@ const { title } = Astro.props;
 		opacity: 0;
 	}
 
-	main {
+	#main {
 		max-width: 500px;
 		margin: 0 auto;
 	}
@@ -84,6 +98,10 @@ const { title } = Astro.props;
 			transition: none;
 		}
 	}
+
+	/* .custom-bounce {
+		animation: bounce 4s infinite;
+	} */
 </style>
 
 <script>
