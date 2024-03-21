@@ -5,7 +5,7 @@
         <audio 
             class="hidden"
           ref="audioPlayer" 
-          src="/music/@coldplay__-_A_Sky_Full_Of_Stars__Lyrics_(256k).mp3"
+          src="/music/askyfullofstars.mp3"
         ></audio>
     </div>
 </template>
